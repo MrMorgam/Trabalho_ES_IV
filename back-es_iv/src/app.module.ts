@@ -4,11 +4,15 @@ import { AppService } from './app.service';
 import { DatabaseModule } from './database/database.module';
 import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { DisciplinaModule } from './disciplina/disciplina.module';
+import { NotaModule } from './nota/nota.module';
 
 @Module({
   imports: [
     DatabaseModule,
-    UserModule
+    UserModule,
+    DisciplinaModule,
+    NotaModule
     ],
   controllers: [AppController],
   providers: [AppService],
